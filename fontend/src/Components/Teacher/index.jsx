@@ -465,7 +465,7 @@ const Teachers = () => {
           }).map((_, index) => (
             <li key={index}>
               <button
-                className="bg-blue-500 hover:bg-blue-800 text-gray-800 font-semibold py-2 px-4 mx-1 rounded"
+                className="bg-blue-100 hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4 mx-1 rounded"
                 onClick={() => paginate(index + 1)}
               >
                 {index + 1}

@@ -156,6 +156,7 @@ const Subject = () => {
         Subject List
       </h1>
       <div className="shadow overflow-hIDden border-b border-gray-200 sm:rounded-lg w-4/5 mx-auto">
+        <br />
         <div className="flex justify-evenly">
           <button
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded ml-2"
@@ -164,6 +165,7 @@ const Subject = () => {
             Add Subject
           </button>
         </div>
+        <br />
         <table className="min-w-full divIDe-y divIDe-gray-200">
           <thead className="bg-gray-50">
             <tr>
@@ -347,7 +349,7 @@ const Subject = () => {
           }).map((_, index) => (
             <li key={index}>
               <button
-                className="bg-blue-500 hover:bg-blue-800 text-gray-800 font-semibold py-2 px-4 mx-1 rounded"
+                className="bg-blue-100 hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4 mx-1 rounded"
                 onClick={() => paginate(index + 1)}
               >
                 {index + 1}

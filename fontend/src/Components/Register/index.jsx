@@ -21,6 +21,8 @@ function Register() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
   const [Name, setName] = useState(''); // Add username state
 
   const handleSubmit = async (event) => {
@@ -52,6 +54,9 @@ function Register() {
   return (
     <ChakraProvider>
       <Box p={4}>
+      <div className="text-center">
+          <h1 className="text-4xl font-bold mt-5 mb-3">Register </h1>
+        </div>
         <form onSubmit={handleSubmit}>
           <VStack spacing={4} align='stretch'>
             <FormControl id="Name">
@@ -83,14 +88,15 @@ function Register() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                {/* <InputRightElement width="4.5rem">
+                 <InputRightElement width="4.5rem">
                   <Button
                     h="1.75rem"
                     size="sm"
-                    onClick={() => setShowPassword(!showPassword)}>
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
                     {showPassword ? "Hide" : "Show"}
                   </Button>
-                </InputRightElement> */}
+                </InputRightElement>
               </InputGroup>
             </FormControl>
 
